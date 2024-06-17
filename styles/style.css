@@ -1,3 +1,7 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
 body {
     font-family: 'Junge', sans-serif;
     color: #ffffff;
@@ -13,5 +17,9 @@ h1, h2, h3, h4, h5, h6 {
 
 footer {
     background-color: #575f1d !important;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
