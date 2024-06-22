@@ -2,14 +2,25 @@ html {
     position: relative;
     min-height: 100%;
 }
+/* Styles de base pour le corps et les titres */
 body {
     font-family: 'Junge', sans-serif;
     color: #ffffff;
-    
+    font-size: 30px;
 }
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Jura', sans-serif;
 }
+
+/* Media query pour les écrans jusqu'à 768px de largeur */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Taille de la police pour les écrans mobiles */
+    }
+}
+
+
 .navbar {
     background-color: #575f1d !important; /* Couleur de fond de la navbar */
     
@@ -23,3 +34,41 @@ footer {
     width: 100%;
 }
 
+.email-link {
+    
+    color: white;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    color: #cccccc;
+}
+
+.hero-scene{
+    position: relative;
+    &::before{
+        content:"";
+        position: absolute;
+        top: 0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/FondHeroScene.jpg);
+        background-position: center;
+    background-size: cover;
+    filter: brightness(0.3);
+    }
+
+    *{
+        position: relative;
+    }
+
+    .hero-scene-content{
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
