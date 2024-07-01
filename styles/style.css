@@ -7,6 +7,7 @@ body {
     font-family: 'Junge', sans-serif;
     color: #ffffff;
     font-size: 30px;
+    background-color:#575f1d ;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,6 +19,7 @@ h1, h2, h3, h4, h5, h6 {
     body {
         font-size: 16px; /* Taille de la police pour les écrans mobiles */
     }
+
 }
 
 
@@ -26,10 +28,17 @@ h1, h2, h3, h4, h5, h6 {
     
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Assure que le header est au-dessus des autres éléments */
+}
+
 footer {
     background-color: #575f1d !important;
     padding: 15px;
-    position: absolute;
     bottom: 0;
     width: 100%;
 }
@@ -46,6 +55,7 @@ footer {
 
 .hero-scene{
     position: relative;
+    margin-bottom: 15px;
     &::before{
         content:"";
         position: absolute;
@@ -53,7 +63,7 @@ footer {
         left:0;
         width: 100%;
         height: 100%;
-        background-image: url(../images/FondHeroScene.jpg);
+        background-image: url(../images/MainZoo.jpg);
         background-position: center;
     background-size: cover;
     filter: brightness(0.3);
@@ -71,4 +81,219 @@ footer {
         justify-content: center;
     }
     
+}
+
+.habitat-scene{
+    position: relative;
+    &::before{
+        content:"";
+        position: absolute;
+        top: 0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/habitatsScene.jpg);
+        background-position: center;
+    background-size: cover;
+    filter: brightness(0.3);
+    }
+
+    *{
+        position: relative;
+    }
+
+    .habitat-scene-content{
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+
+.habitat, .train, .restauration {
+    margin-top: 30px;
+}
+
+.train-scene{
+    position: relative;
+    &::before{
+        content:"";
+        position: absolute;
+        top: 0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/trainScene.jpg);
+        background-position: center;
+    background-size: cover;
+    filter: brightness(0.3);
+    }
+
+    *{
+        position: relative;
+    }
+
+    .train-scene-content{
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+
+.restauration-scene{
+    position: relative;
+    &::before{
+        content:"";
+        position: absolute;
+        top: 0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/restauration.webp);
+        background-position: center;
+    background-size: cover;
+    filter: brightness(0.3);
+    }
+
+    *{
+        position: relative;
+    }
+
+    .restauration-scene-content{
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+
+button {
+    background-color: #868529; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    text-decoration: none;
+    border: none; /* Pas de bordure */
+    border-radius: 15px; /* Bords arrondis */
+    padding: 10px 20px; /* Espacement interne */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: background-color 0.3s; /* Transition pour le changement de couleur de fond */
+    
+}
+
+button:hover {
+    background-color: #6b6e23; /* Couleur de fond lors du survol */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+input[type=text], textarea, input[type=email] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+    resize: vertical;
+  }
+
+  label{margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .container {
+    margin-top: 80px;
+   
+  }
+
+    .custom-404-image {
+        max-width: 40%;
+        height: auto;
+    }
+
+    .badcontainer {
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .btn-custom{
+        background-color: #868529; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    text-decoration: none;
+    border: none; /* Pas de bordure */
+    border-radius: 15px; /* Bords arrondis */
+    padding: 10px 20px; /* Espacement interne */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: background-color 0.3s; /* Transition pour le changement de couleur de fond */
+    
+}
+
+.btn-custom:hover {
+    background-color: #6b6e23; /* Couleur de fond lors du survol */
+}
+
+.leaf {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #1f801f; /* Leaf color */
+    border-radius: 0 70px; /* Rounded shape to look like a leaf */
+    transform: rotate(0deg); /* Initial rotation */
+    z-index: 1; /* Ensures leaves are above other content */
+    pointer-events: none; /* Allows clicks to pass through */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Shadow for depth effect */
+    transition: opacity 2s ease-in-out; /* Transition for fade-out */
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.territories-section {
+    background-color: #ACA064;
+    padding: 20px;
+}
+
+.territories-section h1, .territories-section p {
+    text-align: center;
+    color: #fff;
+}
+
+.territories-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.territory {
+    text-align: center;
+    color: #fff;
+}
+
+.territory img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+.territory h2 {
+    margin-top: 10px;
 }
