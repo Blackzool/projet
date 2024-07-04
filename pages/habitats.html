@@ -10,26 +10,154 @@
 </section>
 <section class="territories-section">
     <article>
-        <div>
-            <div>
-                <h1>Les territoires d’Arcadia Zoo</h1>
-                <p>Au sein des 20 hectares d’Arcadia, découvrez nos magnifiques habitats</p>
-            </div>
+        <div class="divbuttonha text-center">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#myModal">Ajouter un habitat</button>
         </div>
         <div class="territories-container">
             <div class="territory">
-                <img src="image1.jpg" alt="Territoire 1">
-                <h2>Territoire 1</h2>
+                <a href="page.html">
+                    <img src="images\SerreGorilles.jpg" alt="Territoire 1">
+                    <h2><strong>Le Royaume des Gorilles</strong></h2>
+                    <p>Gorilles, colobes, patas...</p>
+                </a>
+                <div>
+                    <button type="button"  data-bs-toggle="modal" data-bs-target="#EditionHabitatModal"><i class="bi bi-pencil-square"></i></button>
+                    <button type="button"  data-bs-toggle="modal" data-bs-target="#SuppressionHabitatModal"><i class="bi bi-trash"></i></button>
+                </div>
+                
             </div>
             <div class="territory">
-                <img src="image2.jpg" alt="Territoire 2">
-                <h2>Territoire 2</h2>
+                <a href="page.html">
+                    <img src="images\SerreAustralienne.jpg" alt="Territoire 2">
+                    <h2><strong>Le Rêve Australien</strong></h2>
+                    <p>Kangourous, koalas...</p>
+                </a>
+                <div>
+                    <button type="button"  data-bs-toggle="modal" data-bs-target="#EditionHabitatModal"><i class="bi bi-pencil-square"></i></button>
+                    <button type="button"  data-bs-toggle="modal" data-bs-target="#SuppressionHabitatModal"><i class="bi bi-trash"></i></button>
+                </div>
+                
             </div>
             <div class="territory">
-                <img src="image3.jpg" alt="Territoire 3">
-                <h2>Territoire 3</h2>
+                <a href="page.html">
+                    <img src="images\SerreAfricaine.jpg" alt="Territoire 3">
+                    <h2><strong>Réserve Africaine</strong></h2>
+                    <p>Girafes, zèbres, otocyons...</p>
+                </a>
+                <div>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#EditionHabitatModal"><i class="bi bi-pencil-square"></i></button>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#SuppressionHabitatModal"><i class="bi bi-trash"></i></button>
+                </div>
+                
             </div>
-            <!-- Ajoutez plus de territoires au besoin -->
-        </div>
+            <div class="territory">
+                <a href="page.html">
+                    <img src="images\SerreFelin.jpg" alt="Territoire 3">
+                    <h2><strong>La Savane des Chasseurs</strong></h2>
+                    <p>Panthères, tigres...</p>
+                </a>
+                <div>
+                    <button type="button"  data-bs-toggle="modal" data-bs-target="#EditionHabitatModal"><i class="bi bi-pencil-square"></i></button>
+                    <button type="button"  data-bs-toggle="modal" data-bs-target="#SuppressionHabitatModal"><i class="bi bi-trash"></i></button>
+                </div>
+                
+            </div>
+            <div class="territory">
+                <a href="page.html">
+                    <img src="images\SerreEuro.jpg" alt="Territoire 3">
+                    <h2><strong>La Lande Sauvage</strong></h2>
+                    <p>Loups, ours bruns...</p>
+                </a>
+                <div>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#EditionHabitatModal"><i class="bi bi-pencil-square"></i></button>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#SuppressionHabitatModal"><i class="bi bi-trash"></i></button>
+                </div>
+            </div>
     </article>
 </section>
+
+<!-- Modal ajout -->
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="myModalLabel">Ajout Habitat</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="NamePhotoInput" class="form-label">Nom Habitat</label>
+                  <input type="text" class="form-control" id="NamePhotoInput" placeholder="La grotte des loups" name="Titre"> 
+                </div>
+                <div class="mb-3">
+                    <label for="NamePhotoInput" class="form-label">Animaux</label>
+                    <input type="text" class="form-control" id="NamePhotoInput" placeholder="Loups, Lynx.." name="Titre"> 
+                </div>
+                <div class="mb-3">
+                  <label for="ImageInput" class="form-label">Image</label>
+                  <input type="file" class="form-control" id="ImageInput"  name="Image">
+                </div>
+                <div class="text-center">
+                    <button type="button">Enregistrer</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal édition -->
+  <div class="modal fade" id="EditionHabitatModal" tabindex="-1" aria-labelledby="EditionHabitatModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="EditionHabitatModalLabel">Edition Photo</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="NamePhotoInput" class="form-label">Nom Habitat</label>
+                  <input type="text" class="form-control" id="NamePhotoInput" placeholder="Le domaine des girafes" name="Titre"> 
+                </div>
+                <div class="mb-3">
+                    <label for="NamePhotoInput" class="form-label">Animaux</label>
+                    <input type="text" class="form-control" id="NamePhotoInput" placeholder="Girafes..." name="Titre"> 
+                </div>
+                <div class="mb-3">
+                  <label for="ImageInput" class="form-label">Image</label>
+                  <input type="file" class="form-control" id="ImageInput"  name="Image">
+                </div>
+                <div class="text-center">
+                    <button type="button">Enregistrer</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal suppression-->
+  <div class="modal fade" id="SuppressionHabitatModal" tabindex="-1" aria-labelledby="SuppressionHabitatModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="SuppressionHabitatModalLabel">Êtes vous sûr de vouloir supprimer cet habitat ?</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                 <p>Titre</p>
+                 <img src="images\SerreGorilles.jpg" class="rounded w-100"/>
+                </div>
+                <div class="text-center">
+                    <button type="button">Supprimer</button>
+                    <button type="button">Annuler</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
